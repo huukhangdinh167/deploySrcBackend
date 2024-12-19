@@ -3,8 +3,7 @@ require("dotenv").config();
 const configCors = (app) => {
     // Add headers before the routes are defined
     app.use(function (req, res, next) {
-        // Website you wish to allow to connect (allow all origins)
-        res.setHeader('Access-Control-Allow-Origin', '*');
+        res.setHeader('Access-Control-Allow-Origin', 'https://datn-fe-web.vercel.app', 'http://localhost:3000');
 
         // Request methods you wish to allow
         res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
